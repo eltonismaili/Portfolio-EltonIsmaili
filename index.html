@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Elton Ismaili portfolio — Full-stack developer building modern web and mobile experiences."
+    />
     <title>Elton Ismaili — Portfolio</title>
 
     <link
@@ -19,23 +23,33 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+    <div class="scroll-progress" aria-hidden="true">
+      <div class="scroll-progress__bar"></div>
+    </div>
+
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="#">Elton Ismaili</a>
+      <div class="container nav-shell">
+        <a class="navbar-brand fw-bold" href="#about">Elton Ismaili</a>
+
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div
           class="collapse navbar-collapse justify-content-end"
           id="navbarNav"
         >
-          <ul class="navbar-nav align-items-center">
+          <ul class="navbar-nav align-items-center nav-pills">
             <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
             </li>
@@ -48,11 +62,13 @@
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
-            <li class="nav-item ms-3">
+
+            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
               <a
                 class="btn btn-sm btn-ghost"
                 href="https://github.com/eltonismaili"
                 target="_blank"
+                rel="noreferrer"
                 >GitHub</a
               >
             </li>
@@ -63,21 +79,38 @@
 
     <section id="about" class="section-about">
       <div class="container">
-        <div class="row align-items-center gx-5">
+        <div class="row align-items-center gx-5 gy-5">
           <div class="col-lg-6 text-light" data-aos="fade-right">
-            <h1 class="display-5 fw-800 mb-3">
+            <div class="hero-kicker">
+              <span class="kicker-dot"></span>
+              <span>Available for internships • Open to collaboration</span>
+            </div>
+
+            <h1 class="hero-title mb-3">
               Hello — I'm <span class="accent">Elton Ismaili</span>
             </h1>
-            <h2 class="lead large-lead mb-4">
+
+            <h2 class="lead hero-subtitle mb-4">
               Full-stack developer & mobile enthusiast — I build modern web and
               mobile experiences using clean code, thoughtful UI and robust
               backends.
             </h2>
-            <p class="mb-4">
+
+            <p class="mb-4 hero-text">
               Experienced with HTML, CSS, JavaScript, Java, Spring Boot, Vue,
-              Python and Swift. I love turning ideas into products and
-              optimizing user flows.
+              React, Python, Swift, MSSQL and PostgreSQL. I love turning ideas
+              into products and optimizing user flows.
             </p>
+
+            <div class="hero-chips mb-4">
+              <span class="chip">Java • Spring Boot</span>
+              <span class="chip">React • UI</span>
+              <span class="chip">Vue • UI</span>
+              <span class="chip">Swift • iOS</span>
+              <span class="chip">MSSQL • Databases</span>
+              <span class="chip">PostgreSQL • Database</span>
+            </div>
+
             <div class="d-flex flex-column flex-sm-row gap-2 w-100">
               <a href="#projects" class="btn btn-primary btn-lg w-100"
                 >View Projects</a
@@ -87,34 +120,54 @@
               >
             </div>
           </div>
+
           <div class="col-lg-6 text-center" data-aos="fade-left">
-            <div class="profile-wrap">
-              <div class="profile-shape"></div>
+            <div class="profile-wrap mx-auto">
+              <div class="profile-glow"></div>
+              <div class="profile-ring"></div>
+
               <img
                 src="images/Elton.jpeg"
                 alt="Elton Ismaili"
-                class="profile-image shadow-lg"
+                class="profile-image"
+                loading="lazy"
               />
+
               <div class="profile-caption mt-3">
-                <h5 class="mb-0">Elton Ismaili</h5>
+                <h5 class="mb-1">Elton Ismaili</h5>
                 <small class="text-muted"
                   >Computer Science • Full-stack Developer</small
                 >
               </div>
+
+              <div class="hero-stats">
+                <div class="stat">
+                  <div class="stat__num">5+</div>
+                  <div class="stat__label">Projects</div>
+                </div>
+                <div class="stat">
+                  <div class="stat__num">5+</div>
+                  <div class="stat__label">Stacks</div>
+                </div>
+                <div class="stat">
+                  <div class="stat__num">∞</div>
+                  <div class="stat__label">Learning</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+        <div class="section-divider" aria-hidden="true"></div>
       </div>
     </section>
 
-    <section id="knowledge" class="section-knowledge py-5">
+    <section id="knowledge" class="section-knowledge">
       <div class="container">
-        <h3
-          class="section-title text-light text-center mb-5"
-          data-aos="fade-up"
-        >
+        <h3 class="section-title text-center mb-5" data-aos="fade-up">
           My Knowledge
         </h3>
+
         <div class="row g-4">
           <div class="col-6 col-md-4 col-lg-3" data-aos="flip-left">
             <div class="tech-box text-center">
@@ -123,6 +176,7 @@
               <p class="small text-muted mb-0">Backend • Spring Boot</p>
             </div>
           </div>
+
           <div
             class="col-6 col-md-4 col-lg-3"
             data-aos="flip-left"
@@ -138,6 +192,7 @@
               <p class="small text-muted mb-0">Semantic Markup</p>
             </div>
           </div>
+
           <div
             class="col-6 col-md-4 col-lg-3"
             data-aos="flip-left"
@@ -153,6 +208,7 @@
               <p class="small text-muted mb-0">Styling • Responsive</p>
             </div>
           </div>
+
           <div
             class="col-6 col-md-4 col-lg-3"
             data-aos="flip-left"
@@ -161,13 +217,14 @@
             <div class="tech-box text-center">
               <img
                 src="images/Unofficial_JavaScript_logo_2.svg.png"
-                alt="JS"
+                alt="JavaScript"
                 class="tech-img mb-3"
               />
               <h6 class="mb-1">JavaScript</h6>
               <p class="small text-muted mb-0">Client Logic • ES6+</p>
             </div>
           </div>
+
           <div
             class="col-6 col-md-4 col-lg-3"
             data-aos="flip-left"
@@ -183,6 +240,7 @@
               <p class="small text-muted mb-0">Scripting • Data</p>
             </div>
           </div>
+
           <div
             class="col-6 col-md-4 col-lg-3"
             data-aos="flip-left"
@@ -198,6 +256,7 @@
               <p class="small text-muted mb-0">iOS Development</p>
             </div>
           </div>
+
           <div
             class="col-6 col-md-4 col-lg-3"
             data-aos="flip-left"
@@ -209,6 +268,7 @@
               <p class="small text-muted mb-0">UI/UX Design</p>
             </div>
           </div>
+
           <div
             class="col-6 col-md-4 col-lg-3"
             data-aos="flip-left"
@@ -224,6 +284,7 @@
               <p class="small text-muted mb-0">Rapid UI</p>
             </div>
           </div>
+
           <div
             class="col-6 col-md-4 col-lg-3"
             data-aos="flip-left"
@@ -235,6 +296,7 @@
               <p class="small text-muted mb-0">Database Management</p>
             </div>
           </div>
+
           <div
             class="col-6 col-md-4 col-lg-3"
             data-aos="flip-left"
@@ -250,6 +312,7 @@
               <p class="small text-muted mb-0">Relational Database</p>
             </div>
           </div>
+
           <div
             class="col-6 col-md-4 col-lg-3"
             data-aos="flip-left"
@@ -265,6 +328,7 @@
               <p class="small text-muted mb-0">Backend Framework</p>
             </div>
           </div>
+
           <div
             class="col-6 col-md-4 col-lg-3"
             data-aos="flip-left"
@@ -284,101 +348,198 @@
       </div>
     </section>
 
-    <section id="projects" class="section-projects py-5">
+    <section id="projects" class="section-projects">
       <div class="container">
-        <h3
-          class="section-title text-light text-center mb-5"
-          data-aos="fade-up"
-        >
+        <h3 class="section-title text-center mb-5" data-aos="fade-up">
           Highlighted Projects
         </h3>
+
         <div class="row g-4">
           <div class="col-md-6" data-aos="fade-up">
-            <div class="project-card p-4 h-100">
-              <div class="d-flex align-items-start gap-3 flex-column">
-                <div class="project-badge">iOS – Swift</div>
-                <h5 class="mb-2">FitTrack</h5>
-                <p class="small text-muted mb-2">
-                  A fully featured fitness tracking app using Swift and UIKit
-                  with animations, maps, web views, and data-driven UI.
-                </p>
-                <a
-                  href="https://github.com/eltonismaili/FitTrack-Swift"
-                  target="_blank"
-                  class="btn btn-sm btn-outline-light"
-                  >View on GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="80">
-            <div class="project-card p-4 h-100">
-              <div class="d-flex align-items-start gap-3 flex-column">
-                <div class="project-badge">Java – Spring Boot</div>
-                <h5 class="mb-2">Attendance Tracking System</h5>
-                <p class="small text-muted mb-2">
-                  A web application to manage student attendance, sessions, and
-                  grades with proper validation, secure authentication, and
-                  role-based access.
-                </p>
-                <a
-                  href="https://github.com/eltonismaili/attendance-tracking-system"
-                  target="_blank"
-                  class="btn btn-sm btn-outline-light"
-                  >View on GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="160">
-            <div class="project-card p-4 h-100">
-              <div class="d-flex align-items-start gap-3 flex-column">
+            <div class="project-card h-100">
+              <div class="project-card__inner p-4">
                 <div class="project-badge">
-                  Full-Stack – Vue & Java Spring Boot
+                  Fullstack – Java Spring Boot &amp; React
                 </div>
-                <h5 class="mb-2">Event Management</h5>
-                <p class="small text-muted mb-2">
-                  A full-stack event management platform allowing users to
-                  browse, create, and manage events. Frontend built with Vue,
-                  backend with Spring Boot and REST APIs.
+                <h5 class="mt-3 mb-2">Internship Matching AI</h5>
+                <p class="small text-muted mb-3">
+                  An in-progress full-stack platform that matches students with
+                  internships based on skills, CV profile and preferences. I am
+                  currently implementing AI-powered matching, secure
+                  authentication with refresh tokens, and role-based access for
+                  different user types (students, companies, admins).
                 </p>
-                <div class="d-flex gap-2">
+
+                <div class="project-tags mb-3">
+                  <span class="tag">AI Matching</span>
+                  <span class="tag">REST</span>
+                  <span class="tag">Full-Stack</span>
+                  <span class="tag">JWT &amp; Refresh Tokens</span>
+                  <span class="tag">RBAC</span>
+                </div>
+
+                <div class="project-actions d-flex gap-2 flex-wrap">
                   <a
-                    href="https://github.com/eltonismaili/event-managment-vue"
+                    href="https://github.com/eltonismaili/YOUR-REPO"
                     target="_blank"
+                    rel="noreferrer"
                     class="btn btn-sm btn-outline-light"
                   >
-                    GitHub(Front-end)
-                  </a>
-                  <a
-                    href="https://github.com/eltonismaili/Event-Management"
-                    target="_blank"
-                    class="btn btn-sm btn-outline-light"
-                  >
-                    GitHub(Back-end)
+                    View on GitHub
                   </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="project-card p-4 h-100">
-              <div class="d-flex align-items-start gap-3 flex-column">
-                <div class="project-badge">UI/UX – Figma</div>
-                <h5 class="mb-2">Fitness App – Figma UI/UX Design</h5>
-                <p class="small text-muted mb-2">
-                  A modern and intuitive fitness app UI designed in Figma,
-                  focusing on user engagement and accessibility. Includes
-                  interactive prototype screens for workout tracking, progress
-                  analytics, and personalized fitness plans.
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="60">
+            <div class="project-card h-100">
+              <div class="project-card__inner p-4">
+                <div class="project-badge">Web – React &amp; EmailJS</div>
+                <h5 class="mt-3 mb-2">DentalArt Studio</h5>
+                <p class="small text-muted mb-3">
+                  A responsive website for a dental clinic built with React.
+                  Includes service sections, a gallery and a contact form
+                  powered by EmailJS that sends patient inquiries directly to
+                  the dentist&rsquo;s email.
                 </p>
-                <a
-                  href="https://github.com/eltonismaili/Fitness-Figma"
-                  target="_blank"
-                  class="btn btn-sm btn-outline-light"
-                  >View on GitHub</a
-                >
+
+                <div class="project-tags mb-3">
+                  <span class="tag">React</span>
+                  <span class="tag">EmailJS</span>
+                  <span class="tag">Responsive UI</span>
+                  <span class="tag">Production</span>
+                </div>
+
+                <div class="project-actions d-flex gap-2 flex-wrap">
+                  <a
+                    href="https://dentalartstudio-ks.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="btn btn-sm btn-primary"
+                  >
+                    Live Website
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="120">
+            <div class="project-card h-100">
+              <div class="project-card__inner p-4">
+                <div class="project-badge">
+                  Fullstack – Vue &amp; Java Spring Boot
+                </div>
+                <h5 class="mt-3 mb-2">Event Management</h5>
+                <p class="small text-muted mb-3">
+                  A full-stack event management platform where users can browse,
+                  create and manage events. Built with Vue on the frontend and
+                  Spring Boot on the backend, with REST APIs, authentication and
+                  role-based access for administrators and regular users.
+                </p>
+
+                <div class="project-tags mb-3">
+                  <span class="tag">Vue</span>
+                  <span class="tag">Spring Boot</span>
+                  <span class="tag">REST</span>
+                  <span class="tag">Auth</span>
+                  <span class="tag">RBAC</span>
+                </div>
+
+                <div class="project-actions d-flex gap-2 flex-wrap">
+                  <a
+                    href="https://github.com/eltonismaili/event-managment-vue"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="btn btn-sm btn-outline-light"
+                  >
+                    GitHub (Front-end)
+                  </a>
+                  <a
+                    href="https://github.com/eltonismaili/Event-Management"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="btn btn-sm btn-outline-light"
+                  >
+                    GitHub (Back-end)
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/feed/update/urn:li:activity:7393714301083033600/?originTrackingId=8c0db1kwyHqCEdHNirnyFA%3D%3D"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="btn btn-sm btn-primary"
+                  >
+                    Watch Demo on LinkedIn
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="180">
+            <div class="project-card h-100">
+              <div class="project-card__inner p-4">
+                <div class="project-badge">iOS – Swift</div>
+                <h5 class="mt-3 mb-2">FitTrack</h5>
+                <p class="small text-muted mb-3">
+                  A fitness tracking app using Swift and UIKit that includes
+                  animations, maps, web views, and data-driven UI to help users
+                  monitor workouts and progress.
+                </p>
+
+                <div class="project-tags mb-3">
+                  <span class="tag">Swift</span>
+                  <span class="tag">UIKit</span>
+                  <span class="tag">Maps</span>
+                  <span class="tag">Animations</span>
+                </div>
+
+                <div class="project-actions d-flex gap-2 flex-wrap">
+                  <a
+                    href="https://github.com/eltonismaili/FitTrack-Swift"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="btn btn-sm btn-outline-light"
+                  >
+                    View on GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="240">
+            <div class="project-card h-100">
+              <div class="project-card__inner p-4">
+                <div class="project-badge">
+                  Java – Spring Boot &amp; Thymeleaf
+                </div>
+                <h5 class="mt-3 mb-2">Attendance Tracking System</h5>
+                <p class="small text-muted mb-3">
+                  A web application to manage student attendance, sessions and
+                  grades with input validation and secure authentication.
+                  Includes a simple dashboard for teachers to view and update
+                  attendance records efficiently.
+                </p>
+
+                <div class="project-tags mb-3">
+                  <span class="tag">Spring Boot</span>
+                  <span class="tag">Auth</span>
+                  <span class="tag">Validation</span>
+                  <span class="tag">CRUD</span>
+                </div>
+
+                <div class="project-actions d-flex gap-2 flex-wrap">
+                  <a
+                    href="https://github.com/eltonismaili/attendance-tracking-system"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="btn btn-sm btn-outline-light"
+                  >
+                    View on GitHub
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -386,40 +547,50 @@
       </div>
     </section>
 
-    <section id="contact" class="section-contact py-5">
+    <section id="contact" class="section-contact">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center" data-aos="fade-up">
-            <h3 class="section-title text-light mb-3">Contact</h3>
-            <p class="text-muted mb-4">
-              Interested in working together? Send me a message — I usually
-              reply within 24–48 hours.
-            </p>
-            <div
-              class="contact-cards d-flex flex-column flex-md-row justify-content-center gap-3"
-            >
-              <a href="mailto:eltonism9@gmail.com" class="contact-card">
-                <strong>Email</strong>
-                <span class="text-muted d-block">eltonism9@gmail.com</span>
-              </a>
-              <a
-                href="https://linkedin.com/in/eltonismaili"
-                target="_blank"
-                class="contact-card"
+            <div class="contact-panel">
+              <div class="contact-kicker">Let’s connect</div>
+              <h3 class="section-title mb-2">Contact</h3>
+              <p class="contact-subtitle mb-4">
+                Interested in working together or have a question? Reach out
+                through any of the channels below.
+              </p>
+
+              <div
+                class="contact-cards d-flex flex-column flex-md-row justify-content-center gap-3"
               >
-                <strong>LinkedIn</strong>
-                <span class="text-muted d-block"
-                  >linkedin.com/in/eltonismaili</span
+                <a href="mailto:eltonism9@gmail.com" class="contact-card">
+                  <span class="contact-label">Email</span>
+                  <span class="text-muted d-block">eltonism9@gmail.com</span>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/elton-ismaili-1b5412384/"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="contact-card"
                 >
-              </a>
-              <a
-                href="https://github.com/eltonismaili"
-                target="_blank"
-                class="contact-card"
-              >
-                <strong>GitHub</strong>
-                <span class="text-muted d-block">github.com/eltonismaili</span>
-              </a>
+                  <span class="contact-label">LinkedIn</span>
+                  <span class="text-muted d-block"
+                    >linkedin.com/in/eltonismaili</span
+                  >
+                </a>
+
+                <a
+                  href="https://github.com/eltonismaili"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="contact-card"
+                >
+                  <span class="contact-label">GitHub</span>
+                  <span class="text-muted d-block"
+                    >github.com/eltonismaili</span
+                  >
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -432,23 +603,34 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
     <script>
-      AOS.init({ duration: 1000, once: true });
-      document.getElementById("year").textContent = new Date().getFullYear();
-      document
-        .querySelectorAll("a.nav-link, a.btn, .contact-card")
-        .forEach((el) => {
-          el.addEventListener("click", function (e) {
-            const href = this.getAttribute("href");
-            if (href && href.startsWith("#")) {
-              e.preventDefault();
-              document
-                .querySelector(href)
-                .scrollIntoView({ behavior: "smooth" });
-            }
+      document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        const reduce = window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches;
+
+        AOS.init({
+          duration: reduce ? 0 : 900,
+          once: true,
+          offset: 80,
+          easing: "ease-out-cubic",
+          disable: reduce,
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach((a) => {
+          a.addEventListener("click", (e) => {
+            const id = a.getAttribute("href");
+            if (!id || id === "#") return;
+            const el = document.querySelector(id);
+            if (!el) return;
+            e.preventDefault();
+            el.scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
           });
         });
-      document.addEventListener("DOMContentLoaded", function () {
+
         const navLinks = document.querySelectorAll(".navbar-collapse a");
         const menuToggle = document.getElementById("navbarNav");
         const bsCollapse = new bootstrap.Collapse(menuToggle, {
@@ -456,11 +638,40 @@
         });
         navLinks.forEach((link) => {
           link.addEventListener("click", () => {
-            if (menuToggle.classList.contains("show")) {
-              bsCollapse.hide();
-            }
+            if (menuToggle.classList.contains("show")) bsCollapse.hide();
           });
         });
+
+        const bar = document.querySelector(".scroll-progress__bar");
+        const onScroll = () => {
+          const doc = document.documentElement;
+          const max = doc.scrollHeight - doc.clientHeight;
+          const pct = max > 0 ? (doc.scrollTop / max) * 100 : 0;
+          bar.style.width = pct + "%";
+        };
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+
+        const links = [...document.querySelectorAll(".nav-link")];
+        const map = new Map(
+          links.map((l) => [l.getAttribute("href")?.slice(1), l])
+        );
+
+        const sections = [...document.querySelectorAll("section[id]")];
+        const obs = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              const id = entry.target.id;
+              links.forEach((l) => l.classList.remove("active"));
+              const active = map.get(id);
+              if (active) active.classList.add("active");
+            });
+          },
+          { rootMargin: "-45% 0px -50% 0px", threshold: 0.01 }
+        );
+
+        sections.forEach((s) => obs.observe(s));
       });
     </script>
   </body>
