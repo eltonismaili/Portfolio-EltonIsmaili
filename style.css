@@ -349,8 +349,20 @@ section[id] {
   z-index: 3;
 }
 
+.profile-caption {
+  position: relative;
+  z-index: 4;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.96);
+  border: 1px solid rgba(148, 163, 184, 0.8);
+  margin-top: 18px;
+}
+
 .profile-caption h5 {
-  color: rgba(248, 250, 252, 0.96);
+  color: rgba(248, 250, 252, 0.98);
+  margin-bottom: 2px;
 }
 
 .hero-stats {
@@ -399,6 +411,73 @@ section[id] {
   font-weight: 800;
   letter-spacing: 0.35px;
   color: rgba(248, 250, 252, 0.96);
+}
+
+/* Experience section */
+
+.section-experience {
+  padding: 70px 0;
+}
+
+.section-experience .row.g-4 > [class*="col-"] {
+  display: flex;
+}
+
+.experience-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background: radial-gradient(
+      600px 240px at 10% 0%,
+      rgba(61, 211, 214, 0.15),
+      transparent 60%
+    ),
+    radial-gradient(
+      600px 240px at 90% 100%,
+      rgba(123, 97, 255, 0.17),
+      transparent 60%
+    ),
+    rgba(15, 23, 42, 0.96);
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(15, 23, 42, 0.95);
+  padding: 22px 24px;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease, background 0.25s ease;
+}
+
+.experience-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  opacity: 0.9;
+}
+
+.experience-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(191, 219, 254, 0.95);
+  box-shadow: 0 26px 60px rgba(15, 23, 42, 1);
+  background: radial-gradient(
+      650px 260px at 8% 0%,
+      rgba(59, 130, 246, 0.35),
+      transparent 60%
+    ),
+    radial-gradient(
+      650px 260px at 92% 100%,
+      rgba(96, 165, 250, 0.35),
+      transparent 60%
+    ),
+    rgba(15, 23, 42, 0.98);
+}
+
+.experience-card h5 {
+  color: rgba(248, 250, 252, 0.98);
 }
 
 .section-knowledge {
@@ -710,6 +789,10 @@ button:focus-visible {
     display: block;
   }
 
+  .section-experience .row.g-4 > [class*="col-"] {
+    display: block;
+  }
+
   .profile-wrap {
     margin-top: 20px;
   }
@@ -740,6 +823,10 @@ button:focus-visible {
   .d-flex.flex-column.flex-sm-row.gap-2.w-100 {
     max-width: 420px;
     margin: 0 auto;
+  }
+
+  .section-experience {
+    padding: 60px 0;
   }
 
   .section-knowledge {
